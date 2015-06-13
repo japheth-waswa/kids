@@ -9,33 +9,46 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../../polymer/polymer.html">
-<link rel="import" href="../paper-radio-button-behavior.html">
-<link rel="import" href="../../paper-ripple/paper-ripple.html">
+<link rel="import" href="../iron-menubar-behavior.html">
 
-<dom-module id="test-radio-button">
+<dom-module id="simple-menubar">
+
   <style>
-  :host #ink {
-    position: absolute;
-    top: -16px;
-    left: -16px;
-    width: 48px;
-    height: 48px;
-  }
+
+    .content ::content > .iron-selected {
+      color: red;
+    }
+
+    .content ::content > * {
+      display: inline-block;
+    }
 
   </style>
+
   <template>
-    <div id="container">
-      <paper-ripple id="ink" class="circle" recenters></paper-ripple>
+
+    <div class="content">
+      <content></content>
     </div>
+
   </template>
+
 </dom-module>
 
 <script>
+
+(function() {
+
   Polymer({
-    is: 'test-radio-button',
+
+    is: 'simple-menubar',
 
     behaviors: [
-      Polymer.PaperRadioButtonBehavior
+      Polymer.IronMenubarBehavior
     ]
+
   });
+
+})();
+
 </script>

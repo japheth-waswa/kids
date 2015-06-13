@@ -9,33 +9,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../../polymer/polymer.html">
-<link rel="import" href="../paper-radio-button-behavior.html">
-<link rel="import" href="../../paper-ripple/paper-ripple.html">
+<link rel="import" href="../iron-menu-behavior.html">
 
-<dom-module id="test-radio-button">
-  <style>
-  :host #ink {
-    position: absolute;
-    top: -16px;
-    left: -16px;
-    width: 48px;
-    height: 48px;
-  }
+<dom-module id="test-menu">
 
-  </style>
   <template>
-    <div id="container">
-      <paper-ripple id="ink" class="circle" recenters></paper-ripple>
-    </div>
+
+    <content></content>
+
   </template>
+
 </dom-module>
 
 <script>
+
+(function() {
+
   Polymer({
-    is: 'test-radio-button',
+
+    is: 'test-menu',
 
     behaviors: [
-      Polymer.PaperRadioButtonBehavior
+      Polymer.IronMenuBehavior
     ]
+
   });
+
+})();
+
 </script>

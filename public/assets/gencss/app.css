@@ -1,4 +1,22 @@
 
+ body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+    }
+
+
+/**drawer css**/
+#drawer{
+    box-shadow: 5px 0 5px -5px #333;
+}
 #drawer > paper-header-panel > paper-toolbar{
-    background-color:#03A9F4;
+    background-color:#4CAF50;
+}
+/****/
+
+/**paper menu**/
+.list{
+    display:inline-block;
+    padding:8px 0px;
+    width:100%;
 }
